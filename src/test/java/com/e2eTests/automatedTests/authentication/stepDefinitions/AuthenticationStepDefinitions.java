@@ -38,7 +38,6 @@ public class AuthenticationStepDefinitions {
 
 	@Then("^Je me redirige vers le compte admin$")
 	public void jeMeRedirigeVersLeCompteAdmin(){
-
 	}
 
 }

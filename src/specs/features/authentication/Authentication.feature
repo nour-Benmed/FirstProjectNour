@@ -9,3 +9,5 @@ Feature: Authentication - OrangeHRM
     And Je saisie Password
     And Je clique sur le boutton login
     Then Je me redirige vers le compte admin
+
+    
