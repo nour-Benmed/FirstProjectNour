@@ -2,7 +2,7 @@
 Feature: Authentication - OrangeHRM
   En tant que utilisateur je souhaite m'authentifier
 
-  @cnx
+  @cnxHRM
   Scenario: Authentication - OrangeHRM
     Given Je me connecte à l'application OrangeHRM
     When Je saisie Username "admin"
