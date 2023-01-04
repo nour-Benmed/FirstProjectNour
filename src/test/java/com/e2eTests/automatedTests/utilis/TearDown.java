@@ -20,7 +20,7 @@ public class TearDown {
 		if (scenario.isFailed()) {
 			saveScreenshotsForScenario(scenario);
 		}
-		this.driver.quit();
+		//this.driver.quit();
 		// PageDriver.getCurrentDriver().quit();
 	}
 

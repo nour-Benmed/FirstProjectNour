@@ -1,11 +1,14 @@
 package com.e2eTests.automatedTests.authentication.pageObjects;
 
+import com.e2eTests.automatedTests.utilis.CommonMethods;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import com.e2eTests.automatedTests.utilis.BasePage;
+
+import java.io.IOException;
 
 public class AuthenticationPage extends BasePage {
 
@@ -15,8 +18,7 @@ public class AuthenticationPage extends BasePage {
 	public AuthenticationPage() {
 		PageFactory.initElements(driver, this);
 	}
-
-	public void goToHomePage() {
+	public void goToHomePage(){
 		driver.get(HOME_PAGE_URL);
 		wait.forLoading(5);
 	}
@@ -35,14 +37,14 @@ public class AuthenticationPage extends BasePage {
 
 
 	/*Methods*/
-	public void FillUserName() {
+	public void FillUserName(String name) {
 		userName.clear();
-		userName.sendKeys("admin");
+		userName.sendKeys(name);
 	}
 
-	public void FillPassword() {
+	public void FillPassword(String password) {
 		userPassword.clear();
-		userPassword.sendKeys("admin123");
+		userPassword.sendKeys(password);
 	}
 
 	public void ClickBtnLogin() {

@@ -13,7 +13,7 @@
     <documentTitle>Automation Rapport </documentTitle>
     
     <!-- report name - displayed at top-nav -->
-    <reportName>Automation Rapport</reportName>
+    <reportName>Orange Rapport</reportName>
     
     <!-- global date format override -->  <!-- defaults to yyyy-MM-dd -->
     <dateFormat>yyyy-MM-dd</dateFormat>

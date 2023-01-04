@@ -21,14 +21,15 @@ public class AuthenticationStepDefinitions {
 			Thread.sleep(5000);
 	}
 
-	@When("^Je saisie Username$")
-	public void jeSaisieUsername() {
-			authenticationPage.FillUserName();
+
+	@When("^Je saisie Username \"([^\"]*)\"$")
+	public void jeSaisieUsername(String name)  {
+		authenticationPage.FillUserName(name);
 	}
 
-	@When("^Je saisie Password$")
-	public void jeSaisiePassword(){
-			authenticationPage.FillPassword();
+	@When("^Je saisie Password \"([^\"]*)\"$")
+	public void jeSaisiePassword(String password) {
+		authenticationPage.FillPassword(password);
 	}
 
 	@When("^Je clique sur le boutton login$")

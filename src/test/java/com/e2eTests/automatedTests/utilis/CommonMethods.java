@@ -1,11 +1,7 @@
 package com.e2eTests.automatedTests.utilis;
 
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.List;
 import java.util.Properties;
 import java.util.regex.Matcher;
@@ -19,8 +15,6 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -30,7 +24,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  * This class contains all the methods required by selenium
  * to perform actions on webelement. It is a repository so 
  * that same code need not to be written again.
- * @author Zied HANNACHI
  *
  */
 public class CommonMethods extends Assertions {
@@ -38,23 +31,22 @@ public class CommonMethods extends Assertions {
 	WebDriver driver = null;
 	public final int timeOut = 45;
 	Properties configProp = new Properties();
-	protected FileInputStream configFis;
 	protected File file = new File("");
 
 	public CommonMethods(WebDriver driver) throws IOException{
 		super(driver);
-		this.driver = driver;	
+		this.driver = driver;
 	}
-
-
 
 	/**
 	 * method to open specified url
 	 * @param url to open
 	 */
 	//Step to navigate to specified URL
-	public void get(String url){
-		driver.get(url);
+	public void get(String url) throws IOException {
+		FileInputStream configFis = new FileInputStream("src/test/resources/configs/config.properties");
+		configProp.load(configFis);
+		driver.get(configProp.getProperty(url));
 	}
 
 
