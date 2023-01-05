@@ -1,19 +1,23 @@
 package com.e2eTests.automatedTests.authentication.stepDefinitions;
 
+import com.e2eTests.automatedTests.utilis.Setup;
 import cucumber.api.java.en.Given;
-import org.junit.Assert;
 
 import com.e2eTests.automatedTests.authentication.pageObjects.AuthenticationPage;
 
-import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 
 public class AuthenticationStepDefinitions {
-	 private AuthenticationPage authenticationPage;
-	    public AuthenticationStepDefinitions() {
-	        this.authenticationPage = new AuthenticationPage();
-	    }
+	public WebDriver driver;
+	private AuthenticationPage authenticationPage = new AuthenticationPage();
+	public void AuthenticationStepDefinitions() {
+		driver = Setup.driver;
+		PageFactory.initElements(driver, AuthenticationPage.class);
+	}
 
 	@Given("^Je me connecte à l'application OrangeHRM$")
 	public void jeMeConnecteÀLApplicationOrangeHRM() throws InterruptedException {
@@ -33,12 +37,14 @@ public class AuthenticationStepDefinitions {
 	}
 
 	@When("^Je clique sur le boutton login$")
-	public void jeCliqueSurLeBouttonLogin() {
+	public void jeCliqueSurLeBouttonLogin() throws InterruptedException {
 			authenticationPage.ClickBtnLogin();
 	}
 
-	@Then("^Je me redirige vers le compte admin$")
-	public void jeMeRedirigeVersLeCompteAdmin(){
-	}
-
+	@Then("^Je me redirige vers le compte admin \"([^\"]*)\"$")
+	public void jeMeRedirigeVersLeCompteAdmin(String message) throws InterruptedException {
+			Thread.sleep(5000);
+			String textMessage = AuthenticationPage.userAdmin.getText();
+			Assert.assertTrue(textMessage.contains(message));
+		}
 }

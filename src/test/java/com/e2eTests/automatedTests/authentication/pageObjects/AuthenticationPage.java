@@ -1,14 +1,11 @@
 package com.e2eTests.automatedTests.authentication.pageObjects;
 
-import com.e2eTests.automatedTests.utilis.CommonMethods;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import com.e2eTests.automatedTests.utilis.BasePage;
-
-import java.io.IOException;
 
 public class AuthenticationPage extends BasePage {
 
@@ -27,6 +24,7 @@ public class AuthenticationPage extends BasePage {
 	final static String USER_NAME = "username";
 	final static String USER_PASSWORD = "password";
 	final static String BUTTON_LOGIN_ID = "//button[@type='submit']";
+	final static String USER_ADMIN ="//*[contains(text(),'helan POL')]";
 
 	@FindBy(how = How.NAME, using = USER_NAME)
 	public static WebElement userName;
@@ -34,6 +32,8 @@ public class AuthenticationPage extends BasePage {
 	public static WebElement userPassword;
 	@FindBy(how = How.XPATH, using = BUTTON_LOGIN_ID)
 	public static WebElement btnLogin;
+	@FindBy(how = How.XPATH, using = USER_ADMIN)
+	public static WebElement userAdmin;
 
 
 	/*Methods*/
