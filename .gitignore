@@ -1,5 +1,4 @@
 /target/
-*.exe
 .project
 .classpath
 .settings
