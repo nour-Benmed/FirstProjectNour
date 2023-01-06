@@ -13,7 +13,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 2871734300,
+  "duration": 1992648100,
   "status": "passed"
 });
 formatter.background({
@@ -47,7 +47,7 @@ formatter.match({
   "location": "AuthenticationStepDefinitions.jeMeConnecteÀLApplicationOrangeHRM()"
 });
 formatter.result({
-  "duration": 7279347400,
+  "duration": 6795179500,
   "status": "passed"
 });
 formatter.match({
@@ -60,7 +60,7 @@ formatter.match({
   "location": "AuthenticationStepDefinitions.jeSaisieUsername(String)"
 });
 formatter.result({
-  "duration": 146328100,
+  "duration": 76483100,
   "status": "passed"
 });
 formatter.match({
@@ -73,14 +73,14 @@ formatter.match({
   "location": "AuthenticationStepDefinitions.jeSaisiePassword(String)"
 });
 formatter.result({
-  "duration": 139451900,
+  "duration": 74239200,
   "status": "passed"
 });
 formatter.match({
   "location": "AuthenticationStepDefinitions.jeCliqueSurLeBouttonLogin()"
 });
 formatter.result({
-  "duration": 64556100,
+  "duration": 35896700,
   "status": "passed"
 });
 formatter.scenario({
@@ -121,7 +121,7 @@ formatter.match({
   "location": "BuzzStepDefinitions.jeCliqueSurLeModuleBuzz()"
 });
 formatter.result({
-  "duration": 5549993400,
+  "duration": 5367934200,
   "status": "passed"
 });
 formatter.match({
@@ -134,14 +134,14 @@ formatter.match({
   "location": "BuzzStepDefinitions.jeSaisieUnMessage(String)"
 });
 formatter.result({
-  "duration": 95800,
+  "duration": 104900,
   "status": "passed"
 });
 formatter.match({
   "location": "BuzzStepDefinitions.jeCliqueSurLeBouttonPost()"
 });
 formatter.result({
-  "duration": 51600,
+  "duration": 63200,
   "status": "passed"
 });
 formatter.match({
@@ -154,11 +154,11 @@ formatter.match({
   "location": "BuzzStepDefinitions.jeVérifieLeMessage(String)"
 });
 formatter.result({
-  "duration": 173200,
+  "duration": 134300,
   "status": "passed"
 });
 formatter.after({
-  "duration": 325500,
+  "duration": 134400,
   "status": "passed"
 });
 });
