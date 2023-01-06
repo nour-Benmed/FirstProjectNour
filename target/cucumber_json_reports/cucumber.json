@@ -1,0 +1,185 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 7279347400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Je me connecte à l\u0027application OrangeHRM",
+            "match": {
+              "location": "AuthenticationStepDefinitions.jeMeConnecteÀLApplicationOrangeHRM()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 146328100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Je saisie Username \"admin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 20
+                }
+              ],
+              "location": "AuthenticationStepDefinitions.jeSaisieUsername(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 139451900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Je saisie Password \"admin123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin123",
+                  "offset": 20
+                }
+              ],
+              "location": "AuthenticationStepDefinitions.jeSaisiePassword(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 64556100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Je clique sur le boutton login",
+            "match": {
+              "location": "AuthenticationStepDefinitions.jeCliqueSurLeBouttonLogin()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2871734300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Setup.setWebDriver()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "Buzz - OrangeHRM",
+        "description": "",
+        "id": "buzz---orangehrm;buzz---orangehrm",
+        "after": [
+          {
+            "result": {
+              "duration": 325500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TearDown.quitDriver(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5549993400,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Je clique sur le module Buzz",
+            "match": {
+              "location": "BuzzStepDefinitions.jeCliqueSurLeModuleBuzz()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 95800,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "je saisie un message \"I\u0027m happy\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "I\u0027m happy",
+                  "offset": 22
+                }
+              ],
+              "location": "BuzzStepDefinitions.jeSaisieUnMessage(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 51600,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "je clique sur le boutton Post",
+            "match": {
+              "location": "BuzzStepDefinitions.jeCliqueSurLeBouttonPost()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 173200,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "je vérifie le message \"I\u0027m happy\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "I\u0027m happy",
+                  "offset": 23
+                }
+              ],
+              "location": "BuzzStepDefinitions.jeVérifieLeMessage(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 11,
+            "name": "@buzz"
+          }
+        ]
+      }
+    ],
+    "name": "Buzz - OrangeHRM",
+    "description": "En tant que utilisateur je souhaite exprimer what is my mind",
+    "id": "buzz---orangehrm",
+    "keyword": "Feature",
+    "uri": "buzz/Buzz.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@buzz"
+      }
+    ]
+  }
+]

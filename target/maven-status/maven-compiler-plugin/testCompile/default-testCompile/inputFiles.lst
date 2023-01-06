@@ -1,0 +1,17 @@
+C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\utilis\GetCurrentHourAndDate.java
+C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\TestRunner.java
+C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\authentication\pageObjects\AuthenticationPage.java
+C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\authentication\stepDefinitions\AutheticationOutlineStepDefinitions.java
+C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\utilis\PageDriver.java
+C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\steps\CommonSteps.java
+C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\utilis\CommonMethods.java
+C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\authentication\stepDefinitions\AuthenticationStepDefinitions.java
+C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\utilis\Assertions.java
+C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\buzz\pageObjects\BuzzPage.java
+C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\buzz\stepDefinitions\BuzzStepDefinitions.java
+C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\utilis\Log.java
+C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\utilis\TearDown.java
+C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\utilis\BasePage.java
+C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\utilis\SingletonBrowserClass.java
+C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\utilis\Setup.java
+C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\utilis\Wait.java

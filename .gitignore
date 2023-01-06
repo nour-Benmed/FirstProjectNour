@@ -1,6 +1,1 @@
 /target/
-.project
-.classpath
-.settings
-*.html
-.idea/*
