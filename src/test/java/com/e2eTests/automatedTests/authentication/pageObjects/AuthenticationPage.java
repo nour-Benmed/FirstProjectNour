@@ -24,7 +24,7 @@ public class AuthenticationPage extends BasePage {
 	final static String USER_NAME = "username";
 	final static String USER_PASSWORD = "password";
 	final static String BUTTON_LOGIN_ID = "//button[@type='submit']";
-	final static String USER_ADMIN ="//*[contains(text(),'helan POL')]";
+	final static String USER_ADMIN ="//*[contains(text(),'Paul Collings')]";
 
 	@FindBy(how = How.NAME, using = USER_NAME)
 	public static WebElement userName;
