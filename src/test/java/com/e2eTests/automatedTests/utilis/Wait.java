@@ -23,21 +23,23 @@ public class Wait {
         wait.until(condition);
     }
 
-    public void forLoading(int timeout){
+    public void forLoading(int timeout) {
         ExpectedCondition<Object> condition = ExpectedConditions.jsReturnsValue("return document.readyState==\"complete\";");
         String timeoutMessage = "Page didn't load after " + Integer.toString(timeout) + " seconds.";
         waitUntilCondition(condition, timeoutMessage, timeout);
     }
 
-    public void forElementToBeDisplayed(int timeout, WebElement webElement, String webElementName){
+    public void forElementToBeDisplayed(int timeout, WebElement webElement, String webElementName) {
         ExpectedCondition<WebElement> condition = ExpectedConditions.visibilityOf(webElement);
         String timeoutMessage = webElementName + " wasn't displayed after " + Integer.toString(timeout) + " seconds.";
         waitUntilCondition(condition, timeoutMessage, timeout);
     }
 
-    public void forPresenceOfElements(int timeout, By elementLocator, String elementName){
+    public void forPresenceOfElements(int timeout, By elementLocator, String elementName) {
         ExpectedCondition<List<WebElement>> condition = ExpectedConditions.presenceOfAllElementsLocatedBy(elementLocator);
         String timeoutMessage = elementName + " elements were not displayed after " + Integer.toString(timeout) + " seconds.";
         waitUntilCondition(condition, timeoutMessage, timeout);
     }
+
+
 }

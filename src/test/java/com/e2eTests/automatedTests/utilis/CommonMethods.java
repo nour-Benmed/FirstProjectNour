@@ -1,11 +1,21 @@
 package com.e2eTests.automatedTests.utilis;
 
-
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -20,10 +30,22 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
+
 /**
  * This class contains all the methods required by selenium
  * to perform actions on webelement. It is a repository so 
  * that same code need not to be written again.
+ *
+ */import org.openqa.selenium.support.ui.WebDriverWait;
+
+
+
+
+/**
+ * This class contains all the methods required by selenium
+ * to perform actions on webelement. It is a repository so
+ * that same code need not to be written again.
+ * @author Zied HANNACHI
  *
  */
 public class CommonMethods extends Assertions {
@@ -31,28 +53,29 @@ public class CommonMethods extends Assertions {
 	WebDriver driver = null;
 	public final int timeOut = 45;
 	Properties configProp = new Properties();
+	protected FileInputStream configFis;
 	protected File file = new File("");
 
-	public CommonMethods(WebDriver driver) throws IOException{
+	public CommonMethods(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
 	}
+
+
 
 	/**
 	 * method to open specified url
 	 * @param url to open
 	 */
 	//Step to navigate to specified URL
-	public void get(String url) throws IOException {
-		FileInputStream configFis = new FileInputStream("src/test/resources/configs/config.properties");
-		configProp.load(configFis);
-		driver.get(configProp.getProperty(url));
+	public void get(String url){
+		driver.get(url);
 	}
 
 
 	/**
 	 * method to navigate to specified page
-	 * @param url navigation url 
+	 * @param url navigation url
 	 */
 	public void navigate(String url){
 		driver.navigate().to(url);
@@ -67,8 +90,8 @@ public class CommonMethods extends Assertions {
 		actions.moveToElement(driver.findElement(element));
 		actions.click().perform();
 	}
-	
-	
+
+
 	/**
 	 * method to click on an element using javascript
 	 * @param element to be clicked
@@ -78,8 +101,8 @@ public class CommonMethods extends Assertions {
 		WebElement webElement = driver.findElement(element);
 		js.executeScript("arguments[0].click();", webElement);
 	}
-	
-	
+
+
 
 	/**
 	 * method to get int part from a string
@@ -124,7 +147,7 @@ public class CommonMethods extends Assertions {
 	 *  method verify whether element is present on screen
 	 * @param targetElement element to be present
 	 * @return true if element is present else throws exception
-	 * @throws InterruptedException Thrown when a thread is waiting, sleeping, 
+	 * @throws InterruptedException Thrown when a thread is waiting, sleeping,
 	 * or otherwise occupied, and the thread is interrupted, either before
 	 *  or during the activity.
 	 */
@@ -138,7 +161,7 @@ public class CommonMethods extends Assertions {
 	 *  method verify whether element is not present on screen
 	 * @param targetElement element not to be present
 	 * @return true if element is not present else throws exception
-	 * @throws InterruptedException Thrown when a thread is waiting, sleeping, 
+	 * @throws InterruptedException Thrown when a thread is waiting, sleeping,
 	 * or otherwise occupied, and the thread is interrupted, either before
 	 *  or during the activity.
 	 */
@@ -289,18 +312,18 @@ public class CommonMethods extends Assertions {
 		}
 	}
 	/**
-	 * method to accept alert, 
+	 * method to accept alert,
 	 * exception is thrown if no alert is present
 	 */
 	public void acceptAlert(){
 		try {
-			Alert alert = driver.switchTo().alert(); 
+			Alert alert = driver.switchTo().alert();
 			alert.accept();
 
 
 		} catch (NoAlertPresentException e){
 			throw new NoAlertPresentException();
-		}	
+		}
 	}
 
 
@@ -308,35 +331,35 @@ public class CommonMethods extends Assertions {
 	 *  method to get message test of alert
 	 * @return message text which is displayed
 	 */
-	public String getAlertText() 
-	{ 
+	public String getAlertText()
+	{
 		try {
-			Alert alert = driver.switchTo().alert(); 
-			String alertText = alert.getText(); 
-			return alertText; 
+			Alert alert = driver.switchTo().alert();
+			String alertText = alert.getText();
+			return alertText;
 		} catch (NoAlertPresentException e){
 			throw new NoAlertPresentException();
 		}
-	}   
+	}
 
 	/**
 	 *  method to verify if alert is present
 	 * @return returns true if alert is present else false
 	 */
-	public boolean isAlertPresent() 
-	{ 
-		try 
-		{ 
+	public boolean isAlertPresent()
+	{
+		try
+		{
 			WebDriverWait wait = new WebDriverWait(driver, timeOut);
 			wait.until(ExpectedConditions.alertIsPresent());
 			driver.switchTo().alert();
-			return true; 
-		}   
-		catch (NoAlertPresentException e) 
-		{   
-			throw new NoAlertPresentException(); 
-		}   
-	}   
+			return true;
+		}
+		catch (NoAlertPresentException e)
+		{
+			throw new NoAlertPresentException();
+		}
+	}
 
 	/**
 	 * method to select a value from dropdown with index
@@ -348,7 +371,7 @@ public class CommonMethods extends Assertions {
 		selectFromDropdown.selectByIndex(valueToBeSelectedindex);
 
 	}
-	
+
 	public void readConfig(String url) throws IOException {
 
 		Properties prop= new Properties();
@@ -357,7 +380,30 @@ public class CommonMethods extends Assertions {
 		driver.get(prop.getProperty(url));
 	}
 
+	public JSONObject JsonData(int i)
+	{
+		JSONParser parser = new JSONParser();
 
+		try {
+			Object obj = parser.parse(new FileReader("./src/test/resources/configs/waits-params.json"));
+
+			JSONArray array = (JSONArray) obj;
+			JSONObject jsonObject = (JSONObject) array.get(i);
+
+			return jsonObject;
+
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+			return null;
+		} catch (IOException e) {
+			e.printStackTrace();
+			return null;
+		} catch (ParseException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
 
 
 

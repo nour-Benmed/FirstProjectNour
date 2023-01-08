@@ -17,7 +17,7 @@ import cucumber.api.junit.Cucumber;
         strict = false, 
         plugin = {"pretty", "json:target/cucumber_json_reports/cucumber.json", "html:target/cucumber-report", "com.cucumber.listener.ExtentCucumberFormatter:target/extent-reports/ExtentReport.html"},
         snippets = SnippetType.CAMELCASE,
-        tags = ("@connexion"),
+        tags = ("@deleteEmployee"),
         monochrome = true)
 
 public class TestRunner {

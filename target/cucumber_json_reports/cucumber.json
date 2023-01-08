@@ -3,41 +3,18 @@
     "line": 2,
     "elements": [
       {
-        "before": [
-          {
-            "result": {
-              "duration": 1978521600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Setup.setWebDriver()"
-            }
-          }
-        ],
-        "line": 6,
-        "name": "Authentication - OrangeHRM",
+        "line": 5,
+        "name": "",
         "description": "",
-        "id": "authentication---orangehrm;authentication---orangehrm",
-        "after": [
-          {
-            "result": {
-              "duration": 176500,
-              "status": "passed"
-            },
-            "match": {
-              "location": "TearDown.quitDriver(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
+        "type": "background",
+        "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 6706302800,
+              "duration": 11239871800,
               "status": "passed"
             },
-            "line": 7,
+            "line": 6,
             "name": "Je me connecte à l\u0027application OrangeHRM",
             "match": {
               "location": "AuthenticationStepDefinitions.jeMeConnecteÀLApplicationOrangeHRM()"
@@ -46,10 +23,10 @@
           },
           {
             "result": {
-              "duration": 75974800,
+              "duration": 138013800,
               "status": "passed"
             },
-            "line": 8,
+            "line": 7,
             "name": "Je saisie Username \"admin\"",
             "match": {
               "arguments": [
@@ -64,10 +41,10 @@
           },
           {
             "result": {
-              "duration": 71070600,
+              "duration": 133750300,
               "status": "passed"
             },
-            "line": 9,
+            "line": 8,
             "name": "Je saisie Password \"admin123\"",
             "match": {
               "arguments": [
@@ -82,52 +59,144 @@
           },
           {
             "result": {
-              "duration": 36134800,
+              "duration": 68737400,
               "status": "passed"
             },
-            "line": 10,
+            "line": 9,
             "name": "Je clique sur le boutton login",
             "match": {
               "location": "AuthenticationStepDefinitions.jeCliqueSurLeBouttonLogin()"
             },
             "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2806755300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Setup.setWebDriver()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "Ajout employee - OrangeHRM",
+        "description": "",
+        "id": "suppression-employee---orangehrm;ajout-employee---orangehrm",
+        "after": [
+          {
+            "result": {
+              "duration": 387600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TearDown.quitDriver(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5261745400,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Je clique sur le module PIM",
+            "match": {
+              "location": "AddEmployeeStepDefinitions.jeCliqueSurLeModulePIM()"
+            },
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 5037763500,
+              "duration": 4145028300,
               "status": "passed"
             },
-            "line": 11,
-            "name": "Je me redirige vers le compte admin \"Paul\"",
+            "line": 14,
+            "name": "Je saisi le numéro de id \"2004\"",
             "match": {
               "arguments": [
                 {
-                  "val": "Paul",
-                  "offset": 37
+                  "val": "2004",
+                  "offset": 26
                 }
               ],
-              "location": "AuthenticationStepDefinitions.jeMeRedirigeVersLeCompteAdmin(String)"
+              "location": "DeleteEmployeeStepDefinitions.jeSaisiLeNuméroDeId(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4075345600,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "je clique sur Search",
+            "match": {
+              "location": "DeleteEmployeeStepDefinitions.jeCliqueSurSearch()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4096743500,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Je clique sur Supprimer",
+            "match": {
+              "location": "DeleteEmployeeStepDefinitions.jeCliqueSurSupprimer()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4097035000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Je clique sur Yes Delete",
+            "match": {
+              "location": "DeleteEmployeeStepDefinitions.jeCliqueSurYesDelete()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 37500,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Je vérifie le message de confirmation",
+            "match": {
+              "location": "DeleteEmployeeStepDefinitions.jeVérifieLeMessageDeConfirmation()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "line": 5,
-            "name": "@cnx"
+            "line": 11,
+            "name": "@deleteEmployee"
           }
         ]
       }
     ],
-    "name": "Authentication - OrangeHRM",
-    "description": "En tant que utilisateur je souhaite m\u0027authentifier",
-    "id": "authentication---orangehrm",
+    "name": "Suppression employee - OrangeHRM",
+    "description": "En tant qu\u0027admin je veux supprimer un employé",
+    "id": "suppression-employee---orangehrm",
     "keyword": "Feature",
-    "uri": "authentication/Authentication.feature",
+    "uri": "employee/DeleteEmployee.feature",
     "tags": [
       {
         "line": 1,
-        "name": "@connexion"
+        "name": "@deleteEmployee"
       }
     ]
   }
