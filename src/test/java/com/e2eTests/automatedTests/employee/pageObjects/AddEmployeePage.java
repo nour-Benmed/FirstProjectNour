@@ -31,6 +31,7 @@ public class AddEmployeePage extends BasePage {
     final static String ID = "//body/div[@id='app']/div[1]/div[2]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/input[1]";
     final static String SAVE_EMPLOYEE = "//button[@type='submit']";
 
+    final static String ALERT = "//p[@class='oxd-text oxd-text--p oxd-text--toast-message oxd-toast-content-text']";
 
     @FindBy(how = How.XPATH, using = MENU_PIM)
     public static WebElement menuPim;
@@ -46,6 +47,8 @@ public class AddEmployeePage extends BasePage {
     public static WebElement id;
     @FindBy(how = How.XPATH, using = SAVE_EMPLOYEE)
     public static WebElement saveEmployee;
+    @FindBy(how = How.XPATH, using = ALERT)
+    public static WebElement alert;
 
     public void ClickOnMenuPim() throws InterruptedException {
        Thread.sleep(mediumWait);

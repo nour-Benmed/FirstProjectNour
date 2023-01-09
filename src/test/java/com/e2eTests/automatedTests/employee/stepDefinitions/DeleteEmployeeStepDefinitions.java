@@ -1,10 +1,12 @@
 package com.e2eTests.automatedTests.employee.stepDefinitions;
 
 import com.e2eTests.automatedTests.buzz.pageObjects.BuzzPage;
+import com.e2eTests.automatedTests.employee.pageObjects.AddEmployeePage;
 import com.e2eTests.automatedTests.employee.pageObjects.DeleteEmployeePage;
 import com.e2eTests.automatedTests.utilis.Setup;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -36,7 +38,10 @@ public class DeleteEmployeeStepDefinitions {
 
     @Then("^Je vérifie le message de confirmation$")
     public void jeVérifieLeMessageDeConfirmation() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
+        Thread.sleep(2000);
+        String textMessage = AddEmployeePage.alert.getText();
+        Assert.assertEquals("Successfully Deleted", textMessage);
+        System.out.println("Message de confirmation est " + textMessage);
     }
 
 }

@@ -56,4 +56,6 @@ public class DeleteEmployeePage extends BasePage {
            driver.switchTo().window(winHandle);}
         confirmDeleteEmployee.click();
     }
+
+
 }

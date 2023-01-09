@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 11239871800,
+              "duration": 7239337600,
               "status": "passed"
             },
             "line": 6,
@@ -23,7 +23,7 @@
           },
           {
             "result": {
-              "duration": 138013800,
+              "duration": 97401200,
               "status": "passed"
             },
             "line": 7,
@@ -41,7 +41,7 @@
           },
           {
             "result": {
-              "duration": 133750300,
+              "duration": 100020100,
               "status": "passed"
             },
             "line": 8,
@@ -59,7 +59,7 @@
           },
           {
             "result": {
-              "duration": 68737400,
+              "duration": 49350200,
               "status": "passed"
             },
             "line": 9,
@@ -75,7 +75,250 @@
         "before": [
           {
             "result": {
-              "duration": 2806755300,
+              "duration": 1948390400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Setup.setWebDriver()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "Ajout employee - OrangeHRM",
+        "description": "",
+        "id": "ajout-employee---orangehrm;ajout-employee---orangehrm",
+        "after": [
+          {
+            "result": {
+              "duration": 140700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TearDown.quitDriver(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4697624800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Je clique sur le module PIM",
+            "match": {
+              "location": "AddEmployeeStepDefinitions.jeCliqueSurLeModulePIM()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4918113100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "je clique sur ADD",
+            "match": {
+              "location": "AddEmployeeStepDefinitions.jeCliqueSurADD()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4100563100,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "je saisie le first name \"Nour\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Nour",
+                  "offset": 25
+                }
+              ],
+              "location": "AddEmployeeStepDefinitions.jeSaisieLeFirstName(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4078559000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "je saisie le middle name  \"Nour\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Nour",
+                  "offset": 27
+                }
+              ],
+              "location": "AddEmployeeStepDefinitions.jeSaisieLeMiddleName(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4092074800,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "je saisie le last name \"Benmohamed\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Benmohamed",
+                  "offset": 24
+                }
+              ],
+              "location": "AddEmployeeStepDefinitions.jeSaisieLeLastName(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4210192900,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "je saisie l\u0027id \"2004\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2004",
+                  "offset": 16
+                }
+              ],
+              "location": "AddEmployeeStepDefinitions.jeSaisieLId(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7069162700,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "je clique sur Save",
+            "match": {
+              "location": "AddEmployeeStepDefinitions.jeCliqueSurSave()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2054180400,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "je vérifier l\u0027alerte de confirmation",
+            "match": {
+              "location": "AddEmployeeStepDefinitions.jeVérifierLAlerteDeConfirmation()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 11,
+            "name": "@addEmployee"
+          }
+        ]
+      }
+    ],
+    "name": "Ajout employee - OrangeHRM",
+    "description": "En tant qu\u0027admin je veux ajouter un employé",
+    "id": "ajout-employee---orangehrm",
+    "keyword": "Feature",
+    "uri": "employee/AddEmployee.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@addEmployee"
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 9048786400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Je me connecte à l\u0027application OrangeHRM",
+            "match": {
+              "location": "AuthenticationStepDefinitions.jeMeConnecteÀLApplicationOrangeHRM()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 93694700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Je saisie Username \"admin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 20
+                }
+              ],
+              "location": "AuthenticationStepDefinitions.jeSaisieUsername(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 87988300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Je saisie Password \"admin123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin123",
+                  "offset": 20
+                }
+              ],
+              "location": "AuthenticationStepDefinitions.jeSaisiePassword(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 48135800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Je clique sur le boutton login",
+            "match": {
+              "location": "AuthenticationStepDefinitions.jeCliqueSurLeBouttonLogin()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1224729800,
               "status": "passed"
             },
             "match": {
@@ -90,7 +333,7 @@
         "after": [
           {
             "result": {
-              "duration": 387600,
+              "duration": 67000,
               "status": "passed"
             },
             "match": {
@@ -103,7 +346,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5261745400,
+              "duration": 4750906000,
               "status": "passed"
             },
             "line": 13,
@@ -115,7 +358,7 @@
           },
           {
             "result": {
-              "duration": 4145028300,
+              "duration": 4111144900,
               "status": "passed"
             },
             "line": 14,
@@ -133,7 +376,7 @@
           },
           {
             "result": {
-              "duration": 4075345600,
+              "duration": 4065034000,
               "status": "passed"
             },
             "line": 15,
@@ -145,7 +388,7 @@
           },
           {
             "result": {
-              "duration": 4096743500,
+              "duration": 4062009900,
               "status": "passed"
             },
             "line": 16,
@@ -157,7 +400,7 @@
           },
           {
             "result": {
-              "duration": 4097035000,
+              "duration": 4073563500,
               "status": "passed"
             },
             "line": 17,
@@ -169,7 +412,7 @@
           },
           {
             "result": {
-              "duration": 37500,
+              "duration": 2059023700,
               "status": "passed"
             },
             "line": 18,

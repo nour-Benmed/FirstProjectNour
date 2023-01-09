@@ -52,7 +52,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Jan 8, 2023 03:07:56 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Jan 9, 2023 08:11:28 PM</span>
 				</a>
 			</li>
 			<li>
@@ -90,6 +90,7 @@
 					<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@addEmployee</a></li>
 					<li><a href='#'>@deleteEmployee</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
@@ -138,7 +139,7 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -153,7 +154,7 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -168,7 +169,7 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>10</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>22</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -187,16 +188,16 @@
 				
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Suppression employee - OrangeHRM</span>
-						<span class='test-time'>Jan 8, 2023 03:07:56 PM</span>
+						<span class='test-name'>Ajout employee - OrangeHRM</span>
+						<span class='test-time'>Jan 9, 2023 08:11:28 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenario node' test-id='2' status='pass'>
 	<div class='category-list'>
-		<span class='category label white-text'>@deleteEmployee</span>
+		<span class='category label white-text'>@addEmployee</span>
 	</div>
-	<span class='duration right label'>0h 0m 36s+201ms</span>
+	<span class='duration right label'>0h 0m 44s+720ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">Ajout employee - OrangeHRM</span>
@@ -246,7 +247,7 @@
 			
 			<b>And</b>
 			
-			<span class="bdd-step-name">And Je saisi le numéro de id "2004"</span>
+			<span class="bdd-step-name">And je clique sur ADD</span>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -254,7 +255,7 @@
 			
 			<b>And</b>
 			
-			<span class="bdd-step-name">And je clique sur Search</span>
+			<span class="bdd-step-name">And je saisie le first name "Nour"</span>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -262,7 +263,7 @@
 			
 			<b>And</b>
 			
-			<span class="bdd-step-name">And Je clique sur Supprimer</span>
+			<span class="bdd-step-name">And je saisie le middle name  "Nour"</span>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -270,11 +271,130 @@
 			
 			<b>And</b>
 			
+			<span class="bdd-step-name">And je saisie le last name "Benmohamed"</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='12' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And je saisie l'id "2004"</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='13' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And je clique sur Save</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='14' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then je vérifier l'alerte de confirmation</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>Suppression employee - OrangeHRM</span>
+						<span class='test-time'>Jan 9, 2023 08:12:13 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='16' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@deleteEmployee</span>
+	</div>
+	<span class='duration right label'>0h 0m 33s+642ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Ajout employee - OrangeHRM</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='17' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Je me connecte à l'application OrangeHRM</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='18' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When Je saisie Username "admin"</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='19' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And Je saisie Password "admin123"</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='20' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And Je clique sur le boutton login</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='21' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When Je clique sur le module PIM</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='22' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And Je saisi le numéro de id "2004"</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='23' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And je clique sur Search</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='24' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And Je clique sur Supprimer</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='25' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
 			<span class="bdd-step-name">And Je clique sur Yes Delete</span>
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='12' class='node then pass' status='pass'>
+		<li test-id='26' class='node then pass' status='pass'>
 			
 			<b>Then</b>
 			
@@ -338,6 +458,45 @@
 				
 				<li class='category displayed active'>
 					<div class='category-heading'>
+						<span class='category-name'>@addEmployee</span>
+						<span class='category-status right'>
+							<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 9, 2023 08:11:28 PM</td>
+										<td class='linked' test-id='1'>Ajout employee - OrangeHRM</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 9, 2023 08:11:28 PM</td>
+										<td class='linked' test-id='2'>Ajout employee - OrangeHRM.Ajout employee - OrangeHRM</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
 						<span class='category-name'>@deleteEmployee</span>
 						<span class='category-status right'>
 							<span class='label pass'>2</span>
@@ -361,13 +520,13 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 8, 2023 03:07:56 PM</td>
-										<td class='linked' test-id='1'>Suppression employee - OrangeHRM</td>
+										<td>Jan 9, 2023 08:12:13 PM</td>
+										<td class='linked' test-id='15'>Suppression employee - OrangeHRM</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 8, 2023 03:07:56 PM</td>
-										<td class='linked' test-id='2'>Suppression employee - OrangeHRM.Ajout employee - OrangeHRM</td>
+										<td>Jan 9, 2023 08:12:13 PM</td>
+										<td class='linked' test-id='16'>Suppression employee - OrangeHRM.Ajout employee - OrangeHRM</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -396,37 +555,37 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>10</div>
+					<div class='panel-lead'>22</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jan 8, 2023 03:07:56 PM</div>
+					<div class='panel-lead'>Jan 9, 2023 08:11:28 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jan 8, 2023 03:08:32 PM</div>
+			 		<div class='panel-lead'>Jan 9, 2023 08:12:47 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 36s+482ms</div>
+					<div class='panel-lead'>0h 1m 18s+524ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -440,6 +599,15 @@
 							<th>Failed</th>
 							<th>Others</th>
 							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>@addEmployee</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
 						</tr>
 						<tr>
 							<td>@deleteEmployee</td>
@@ -463,7 +631,7 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 1,
+				passParent: 2,
 				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
@@ -471,7 +639,7 @@
 				skipParent: 0,
 				exceptionsParent: 0,
 				
-				passChild: 1,
+				passChild: 2,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
@@ -480,7 +648,7 @@
 				infoChild: 0,
 				exceptionsChild: 0,
 				
-				passGrandChild: 10,
+				passGrandChild: 22,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,

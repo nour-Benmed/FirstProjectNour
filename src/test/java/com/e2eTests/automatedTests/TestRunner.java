@@ -17,7 +17,7 @@ import cucumber.api.junit.Cucumber;
         strict = false, 
         plugin = {"pretty", "json:target/cucumber_json_reports/cucumber.json", "html:target/cucumber-report", "com.cucumber.listener.ExtentCucumberFormatter:target/extent-reports/ExtentReport.html"},
         snippets = SnippetType.CAMELCASE,
-        tags = ("@deleteEmployee"),
+        tags = ("@addEmployee,@deleteEmployee"),
         monochrome = true)
 
 public class TestRunner {
@@ -25,5 +25,4 @@ public class TestRunner {
 	public static void writeExtentReport() {
 		Reporter.loadXMLConfig(new File("src/test/resources/configs/extent-config.xml"));
 	}
-
 }
