@@ -13,7 +13,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 2025632500,
+  "duration": 2792251700,
   "status": "passed"
 });
 formatter.scenario({
@@ -52,14 +52,14 @@ formatter.step({
 });
 formatter.step({
   "line": 11,
-  "name": "Je me redirige vers le compte admin \"jamal\"",
+  "name": "Je me redirige vers le compte admin \"ABcb\"",
   "keyword": "Then "
 });
 formatter.match({
   "location": "AuthenticationStepDefinitions.jeMeConnecteÀLApplicationOrangeHRM()"
 });
 formatter.result({
-  "duration": 8693763300,
+  "duration": 8977371600,
   "status": "passed"
 });
 formatter.match({
@@ -72,7 +72,7 @@ formatter.match({
   "location": "AuthenticationStepDefinitions.jeSaisieUsername(String)"
 });
 formatter.result({
-  "duration": 98984500,
+  "duration": 134668000,
   "status": "passed"
 });
 formatter.match({
@@ -85,31 +85,33 @@ formatter.match({
   "location": "AuthenticationStepDefinitions.jeSaisiePassword(String)"
 });
 formatter.result({
-  "duration": 95605900,
+  "duration": 130675100,
   "status": "passed"
 });
 formatter.match({
   "location": "AuthenticationStepDefinitions.jeCliqueSurLeBouttonLogin()"
 });
 formatter.result({
-  "duration": 48829200,
+  "duration": 61366200,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "jamal",
+      "val": "ABcb",
       "offset": 37
     }
   ],
   "location": "AuthenticationStepDefinitions.jeMeRedirigeVersLeCompteAdmin(String)"
 });
 formatter.result({
-  "duration": 5064900300,
-  "status": "passed"
+  "duration": 5051838100,
+  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat com.e2eTests.automatedTests.authentication.stepDefinitions.AuthenticationStepDefinitions.jeMeRedirigeVersLeCompteAdmin(AuthenticationStepDefinitions.java:48)\r\n\tat ✽.Then Je me redirige vers le compte admin \"ABcb\"(authentication/Authentication.feature:11)\r\n",
+  "status": "failed"
 });
+formatter.embedding("image/png", "embedded0.png");
 formatter.after({
-  "duration": 142300,
+  "duration": 285328600,
   "status": "passed"
 });
 });
