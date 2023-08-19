@@ -1,4 +1,7 @@
 C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\utilis\GetCurrentHourAndDate.java
+C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\employee\pageObjects\DeleteEmployeePage.java
+C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\employee\pageObjects\AddEmployeePage.java
+C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\employee\stepDefinitions\DeleteEmployeeStepDefinitions.java
 C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\TestRunner.java
 C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\authentication\pageObjects\AuthenticationPage.java
 C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\authentication\stepDefinitions\AutheticationOutlineStepDefinitions.java
@@ -9,6 +12,7 @@ C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\a
 C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\utilis\Assertions.java
 C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\buzz\pageObjects\BuzzPage.java
 C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\buzz\stepDefinitions\BuzzStepDefinitions.java
+C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\employee\stepDefinitions\AddEmployeeStepDefinitions.java
 C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\utilis\Log.java
 C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\utilis\TearDown.java
 C:\ProjectNour\arvea-test-automation\src\test\java\com\e2eTests\automatedTests\utilis\BasePage.java
