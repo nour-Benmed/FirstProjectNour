@@ -20,7 +20,6 @@ import cucumber.api.junit.Cucumber;
         tags = ("@connexion"),
         monochrome = true)
 
-
 public class TestRunner {
 		@AfterClass
 	public static void writeExtentReport() {
